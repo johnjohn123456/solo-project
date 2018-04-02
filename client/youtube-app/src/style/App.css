@@ -1,0 +1,180 @@
+.App {
+  text-align: center;
+}
+
+html{
+  background-color: white;
+  overflow: hidden;
+}
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.categ-player {
+  display: flex;
+  flex-direction: row;
+  margin: 2%;
+  justify-content: center;
+  overflow: hidden;
+  width: 75%;
+}
+
+.videoDisplay {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 500%;
+  margin-top:10%;
+}
+
+.portait{
+  display: flex;
+  width: 50%;
+  height: 400px;
+  justify-content: center;
+  background-image: url('../img/video-wall.jpg');
+  left-margin:-20px;
+}
+
+iframe{
+  width: 100%;
+  height: auto;
+}
+
+ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top:6%;
+}
+
+.img-title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.img-ctx {
+  width: 100%;
+}
+
+.img-ctx:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+
+.title-ctx {
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+}
+
+.countries-list {
+  display: flex;
+  flex-direction: column;
+  font-size:1.2em;
+  border-top:2px solid grey;
+  align-items: center;
+  overflow-y: scroll;
+  max-height: 200px;
+}
+div::-webkit-scrollbar { 
+    display: none; 
+}
+
+.categories-list {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2em;
+  border-top:2px solid grey;
+  align-items: center;
+  overflow-y: scroll;
+  max-height: 200px;
+}
+
+.categ-item {
+  margin: 5%;
+}
+
+.country-item {
+  margin: 10%;
+}
+
+.country-item:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.categ-item:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.categories {
+  margin-left: auto;
+  margin-right: 3%;
+  margin-top:-20px;
+  color:black;
+  overflow: hidden;
+}
+
+.ctx-select {
+  width: 100%;
+}
+
+.videos-title {
+  margin-bottom: -4%;
+}
+
+.video-list-w {
+  background-color: #e6e6e6;
+  
+}
+.prev-video {
+  margin-left: 100%;
+}
+h1 {
+  color:black;
+  text-align: center;
+}
+
+.countries-list:hover h2{
+  animation-name: title;
+  animation-duration: 2s;
+}
+
+@keyframes title {
+    from {color: black;}
+    to {color: red;}
+}
+
+h1:hover {
+  animation-name: title;
+  animation-duration: 2s;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

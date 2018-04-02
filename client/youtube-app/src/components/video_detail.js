@@ -1,6 +1,6 @@
 import React from 'react';
-import '../App.css'
-import logo from '../loading-gif-transparent-4.gif'
+import '../style/App.css'
+import logo from '../img/loading-gif-transparent-4.gif'
 
 const VideoDetail = (props) => {
   if (!props.video) {
