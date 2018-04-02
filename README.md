@@ -8,3 +8,7 @@ Run to the folder client/youtube-app
 ```
 npm run
 ```
+
+## Built With
+
+React, MongoDB, Mongoose, Express
