@@ -11,19 +11,17 @@ const VideoDetail = (props) => {
   const url = `https://www.youtube.com/embed/${videoId}`;
 
   return (
-    <div className="videoDisplay">
-      <div className="portait">
-        <iframe 
-        frameborder='1' 
+      <div className="wrap-player">
+        <iframe
+        frameborder='1'
         allowfullscreen="allowfullscreen"
-        mozallowfullscreen="mozallowfullscreen" 
-        msallowfullscreen="msallowfullscreen" 
-        oallowfullscreen="oallowfullscreen" 
-        webkitallowfullscreen="webkitallowfullscreen" 
+        mozallowfullscreen="mozallowfullscreen"
+        msallowfullscreen="msallowfullscreen"
+        oallowfullscreen="oallowfullscreen"
+        webkitallowfullscreen="webkitallowfullscreen"
         src={url}>
         </iframe>
       </div>
-    </div>
   );
 };
 

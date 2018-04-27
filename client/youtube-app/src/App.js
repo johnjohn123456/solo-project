@@ -13,7 +13,7 @@ const API_KEY ='AIzaSyBYbWYL7ULb3BkTP2i6WAUuQW3PuUcYrWQ';
 
 class App extends Component {
   constructor(props) {
-    super (props); 
+    super (props);
 
     this.state ={
       videos:[],
@@ -22,7 +22,7 @@ class App extends Component {
       countries:'US',
       categName:'',
       flag:''
-    };   
+    };
 
     this.categ = this.categ.bind(this);
     this.countryId = this.countryId.bind(this);
@@ -37,7 +37,7 @@ class App extends Component {
     })
 
     this.fetchVideos(this.state.countries,categ);
-  } 
+  }
 
   countryId(country,Cflag) {
     this.setState({
@@ -49,7 +49,7 @@ class App extends Component {
   }
   fetchServer() {
     console.log('yey');
-  }  
+  }
 
   fetchVideos(countries,categoryId) {
     fetch(`https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&regionCode=${countries}&videoCategoryId=${categoryId}&key=AIzaSyBYbWYL7ULb3BkTP2i6WAUuQW3PuUcYrWQ`)
@@ -67,13 +67,13 @@ class App extends Component {
       })
     })
     )
-  }   
+  }
 
   render() {
     return (
       <div>
       <h1>SpyTube</h1>
-        <div className="categ-player">
+        <div className="main-app">
           <div className="video-player">
         <VideoDetail video={this.state.selectedVideo}/>
           </div>
@@ -82,10 +82,12 @@ class App extends Component {
             <CategoryId categ={this.categ} categName={this.state.categName}/>
           </div>
         </div>
-        <VideoList onSelect={selectedVideo => this.setState({selectedVideo})} videos={this.state.videos} categories={this.state.categ} categName={this.state.categName}/>
+        <div className="videolist">
+          <VideoList onSelect={selectedVideo => this.setState({selectedVideo})} videos={this.state.videos} categories={this.state.categ} categName={this.state.categName}/>
+        </div>
       </div>
     );
-  }  
+  }
 }
 
 export default App;
